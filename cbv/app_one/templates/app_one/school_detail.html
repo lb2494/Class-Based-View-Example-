@@ -14,6 +14,8 @@
     <p>Age: {{ student.age }}</p>
     {% endfor %}
      </ol>
-
+<br>
+    <a class="btn btn-warning" href="{% url 'app_one:update' pk=school_detail.pk %}">Update</a>
 </div>
+
 {% endblock %}
