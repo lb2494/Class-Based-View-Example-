@@ -1,4 +1,4 @@
-from django.views.generic import View, TemplateView, ListView, DetailView
+from django.views.generic import View, TemplateView, ListView, DetailView, CreateView, DeleteView
 from app_one import models
 
 # Create your views here.
@@ -20,3 +20,7 @@ class SchoolDetailView(DetailView):
     template_name = 'app_one/school_detail.html'
 
     context_object_name = 'school_detail'
+
+class SchoolCreateView(CreateView):
+    fields = ('name','principal','location')
+    model = models.School
